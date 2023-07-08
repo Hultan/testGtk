@@ -33,8 +33,8 @@ func (m MainForm) StartApplication(app *gtk.Application) {
 	openFormButton := getObject("openFormButton").(*gtk.Button)
 	openFormButton.Connect(
 		"clicked", func() {
-			e := &ExtraForm{}
-			e.open(win)
+			e := newExtraForm(win)
+			e.open()
 		},
 	)
 
